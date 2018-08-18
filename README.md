@@ -1,3 +1,13 @@
+# Two way RPC demo
+---
+Simple demo feauturing 2 way RPC communication between C++ backend and JS frontend
+
+
+### Install dependecies
+- [libjson-rpc-cpp](https://github.com/cinemast/libjson-rpc-cpp)
+
+### Build and run
+
 ```
 cd frontend
 npm i
