@@ -27,5 +27,6 @@ int main()
       }
    }
 
+   rpcServer.StopListening();
    return 0;
 }
