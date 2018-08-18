@@ -1,0 +1,8 @@
+*/**/.idea
+backend/cmake-build-debug
+backend/CMakeCache.txt
+backend/Makefile
+backend/rpc_demo
+backend/CMakeFiles
+backend/cmake_install.cmake
+frontend/node_modules
