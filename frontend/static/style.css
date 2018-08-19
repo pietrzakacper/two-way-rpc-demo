@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,300,700");
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background: #111;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  touch-callout: none;
+  user-select: none;
+  display: inline-block;
+  border: .2em solid;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0.6;
+  color: #FFF;
+}
+.button__text {
+  display: block;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.button__text:before {
+  content: attr(title);
+}
+.button__text--bis {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(-1em);
+  opacity: 0;
+}
+.button__mask {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  transform: translateX(-100%) rotate(45deg);
+  transition: all 0.3s;
+}
+
+.button:hover {
+  opacity: 1;
+}
+.button:hover .button__text {
+  animation: fx-text .3s ease-out;
+}
+.button:hover .button__text--bis {
+  animation: fx-text-bis .3s ease-out;
+}
+.button:hover .button__mask {
+  animation: fx-mask .3s ease-out;
+}
+
+.button:active {
+  opacity: 1;
+  background: white;
+  color: inherit;
+}
+
+@keyframes fx-mask {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+@keyframes fx-text {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1em);
+    opacity: 0;
+  }
+}
+@keyframes fx-text-bis {
+  0% {
+    transform: translateX(-1em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.text-effect {
+  overflow: hidden;
+  position: relative;
+  filter: contrast(110%) brightness(190%);
+}
+
+.neon {
+  position: relative;
+  background: black;
+  color: transparent;
+}
+.neon::before, .neon::after {
+  content: attr(data-text);
+  color: white;
+  filter: blur(0.02em);
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+.neon::after {
+  mix-blend-mode: difference;
+}
+
+.gradient,
+.spotlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.gradient {
+  background: linear-gradient(45deg, red, blue);
+  mix-blend-mode: multiply;
+}
+
+.spotlight {
+  animation: light 5s infinite linear;
+  background: radial-gradient(circle, #ffffff, rgba(0, 0, 0, 0) 25%) 0 0/25% 25%, radial-gradient(circle, #ffffff, #000000 25%) 50% 50%/12.5% 12.5%;
+  top: -100%;
+  left: -100%;
+  mix-blend-mode: color-dodge;
+}
+
+@keyframes light {
+  100% {
+    transform: translate3d(50%, 50%, 0);
+  }
+}
+.neon {
+  font: 700 110px 'Lato', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
+.neon:focus {
+  outline: none;
+  border: 1px dotted white;
+}
+
+body {
+  background: black;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}

@@ -2,13 +2,16 @@
   "name": "rpc-demo-frontend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
-  "author": "",
+  "author": "pietrzakacper",
   "license": "ISC",
   "dependencies": {
     "node-json-rpc": "0.0.1"
+  },
+  "devDependencies": {
+    "electron": "^2.0.7"
   }
 }

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Two way RPC demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper" id="say-hello-btn">
+        <div class="button">
+          <span class="button__mask"></span>
+          <span class="button__text">Call sayHello</span>
+          <span class="button__text button__text--bis">Call sayHello</span>
+        </div>
+    </div>
+    <div class="text-effect hide" id="backend-msg">
+        <h1 class="neon" data-text="Goodbye">Goodbye</h1>
+        <div class="gradient"></div>
+        <div class="spotlight"></div>
+    </div>
+    <script>require('../src/renderer')</script>
+</body>
+</html>
